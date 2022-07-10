@@ -10,9 +10,9 @@ serverSocket.bind(( serverHost, serverPort))
 
 print ( 'The server is ready to receive ' )
 # while True:
-connectionID, addr = serverSocket.accept()
+# connectionID, addr = serverSocket.accept()
 # print ("The server connected to: " + str(addr) )
-sentence = connectionID.recv(1024).decode()
+sentence = serverSocket.recv(1024).decode()
 print ("Message received from client: " + str(sentence ))
         # capitalizedSentence = sentence.upper()
         # # print ("upcased: " + str(capitalizedSentence ))
@@ -20,7 +20,7 @@ print ("Message received from client: " + str(sentence ))
 
 reply = "back at you"
 
-connectionID.send(reply.encode())
+serverSocket.send(reply.encode())
 
 
 
