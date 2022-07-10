@@ -15,12 +15,12 @@ print ( 'The server is ready to receive ' )
 # sentence = serverSocket.recv(1024).decode()
 bytesAddressPair = serverSocket.recvfrom(1024)
 
-data = bytesAddressPair[0]
+data = bytesAddressPair[0].decode()
 
 address = bytesAddressPair[1]
-
+print("there")
 # sentence = serverSocket.recv(1024).decode()
-clientMsg = "Message received from Client:{}".format(data)
+clientMsg = "Message received from Client: " + data 
 
 # print ("Message received from client: " + str(data))
 print(clientMsg)
