@@ -31,12 +31,7 @@ print(clientMsg)
 reply = "back at you"
 bytesToSend  = str.encode(reply)
 
-<<<<<<< HEAD
-serverSocket.sendto(reply.encode(),("localhost",serverPort))
-
-=======
 serverSocket.sendto(bytesToSend,address)
->>>>>>> 14cd4fe2e49a2a50a22afee39466d62248e8e7d4
 
 
 serverSocket.close()
