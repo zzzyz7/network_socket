@@ -17,11 +17,13 @@ clientSocket.send(sentence.encode())
 modifiedSentence = clientSocket.recv(1024)
 print( "Message received from Server: " + modifiedSentence.decode())
 
-t2 = time.time()
+# t2 = time.time()
 
-print("RTT for TCP is", t2-t1)
+# print("RTT for TCP is", t2-t1)
 
 clientSocket.close()
 
+t2 = time.time()
 
+print("RTT for TCP is", t2-t1)
 
