@@ -20,7 +20,7 @@ print ("Message received from client: " + str(sentence ))
 
 reply = "back at you"
 
-serverSocket.send(reply.encode())
+serverSocket.send(reply.encode(),(serverHost, serverPort))
 
 
 
